@@ -1,0 +1,47 @@
+/* ============================================
+   ESTILOS GLOBALES DE FUNCIONES DE GESTIÓN
+   ============================================ */
+
+#contenido-principal-gestion {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    height: 100vh;
+}
+
+.centro-pagina-gestion {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gestion-inicio {
+    padding: 0px 0px 30px;
+    border-bottom: 2px solid var(--color-borde);
+}
+
+.gestion-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 24px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.formulario-acciones {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 15px;
+    justify-content: space-between;
+}

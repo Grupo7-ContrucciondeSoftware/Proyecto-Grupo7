@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestión de Almacén - Panel principal">
+    <title>ALMXN - Agregar Usuario</title>
+    
+    <!-- ===== ESTILOS ===== -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/globalGestion.css">
+    <link rel="stylesheet" href="../styles/agregarProducto.css">
+</head>
+<body>
+    
+    <input type="checkbox" id="theme-toggle" style="display:none">
+
+    <!-- ===== ENCABEZADO ===== -->
+    <header id="header-principal">
+        <div class="header-contenedor">
+
+            <!-- LOGO DEL SISTEMA -->
+            <a class="logo" href="../index/main.html">
+                <img src="../extras/logoPequeñoALMXNAlt.png" alt="Logo ALMXN" class="img img-logo">
+            </a>
+
+            <!-- BARRA DE NAVEGACIÓN -->
+            <nav id="nav-principal">
+                <ul class="nav-lista">
+                    <li class="nav-item">
+                        <a href="../index/main.html" class="nav-enlace nav-enlace--activo">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="../index/gestion.html" class="nav-enlace">Gestión</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="../index/contacto.html" class="nav-enlace">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="../index/publicidad.html" class="nav-enlace">Publicidad</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- USUARIO ACTUAL -->
+            <div class="header-usuario">
+                <span class="usuario-nombre">Juan Ramos</span>
+                <span class="usuario-rol"><b>Administrador</b></span>
+                <a href="../index/login.html" class="btn btn-secundario">Cerrar sesión</a>
+            </div>
+
+            <div>
+                <label for="theme-toggle">
+                    <div class="track">Activa</div>
+                </label>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main id="contenido-principal-gestion">
+
+        <div class="centro-pagina-gestion">
+
+            <!-- TITULO/INICIO -->
+            <section id="gestion-inicio" class="gestion-inicio">
+                <h1 class="titulo-seccion">Agregar Usuario</h1>
+                <p class="subtitulo-seccion">Añada un usuario al sistema. <br> Ingrese la información requerida:</p>
+            </section>
+
+            <!-- FORMULARIO -->
+            <section id="formulario-agregar-producto" class="formulario">
+
+                <div class="form-grupo">
+                    <label for="nombres-usuario" class="form-label">Nombres</label>
+                    <input
+                        type="text"
+                        id="nombres-usuario"
+                        name="nombres-usuario"
+                        class="form-control"
+                        placeholder="Ej: Juan Eduardo"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <label for="apellidos-usuario" class="form-label">Apellidos</label>
+                    <input
+                        type="text"
+                        id="apellidos-usuario"
+                        name="apellidos-usuario"
+                        class="form-control"
+                        placeholder="Ej: Ramos Pérez"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email-usuario" class="form-label">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email-usuario"
+                        name="email-usuario"
+                        class="form-control"
+                        placeholder="Ej: juan@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <label for="usuario-rol" class="form-label">Rol</label>
+                    <select id="usuario-rol" name="usuario-rol" class="form-control">
+                        <option value="" disabled selected>Seleccione un rol</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Usuario</option>
+                    </select>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="contraseña-usuario" class="form-label">Contraseña</label>
+                    <input
+                        type="password"
+                        id="contraseña-usuario"
+                        name="contraseña-usuario"
+                        class="form-control"
+                        placeholder="**********"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <label for="confirmar-contraseña-usuario" class="form-label">Confirmar Contraseña</label>
+                    <input
+                        type="password"
+                        id="confirmar-contraseña-usuario"
+                        name="confirmar-contraseña-usuario"
+                        class="form-control"
+                        placeholder="**********"
+                        required
+                    >
+                </div>
+
+                <!-- BOTONES GUARDAR/VOLVER -->
+                <div class="formulario-acciones">
+                    <a href="../index/adminusuario.html" class="btn btn-secundario">Volver</a>
+                    <button type="submit" class="btn btn-primario" id="btn-guardar-producto">Guardar producto</button>
+                </div>
+
+            </section>
+        </div>
+        
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer id="footer-principal" class="footer">
+        <div class="footer-contenedor">
+            <p class="footer-texto">&copy; 2026 Sistema de Gestión de Almacén.</p>
+        </div>
+    </footer>
+</body>
+</html>

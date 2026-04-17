@@ -1,0 +1,56 @@
+/* ============================================
+   ESTILOS ADMINISTRAR USUARIOS
+   ============================================ */
+
+.form-control{
+    width: 25%;
+}
+
+/* ROLES */
+.rol {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.admin {
+    background: #1e2d4a;
+    color: #4f8ef7;
+}
+
+.usuario {
+    background: #8a5a07;
+    color: #ffd182;
+}
+
+/* ESTADOS */
+.estado {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-size: 15px;
+}
+
+.activo {
+    background: #163d2a;
+    color: var(--color-ingreso);
+}
+
+.suspendido {
+    background: #2e2d2e;
+    color: #b0b0b0;
+}
+
+.bloqueado {
+    background: #3d1a1a;
+    color: var(--color-salida);
+}
+
+#btn-editar{
+    padding: 4px 20px;
+    
+}
+
+#btn-eliminar{
+    padding: 4px 12px;
+}
