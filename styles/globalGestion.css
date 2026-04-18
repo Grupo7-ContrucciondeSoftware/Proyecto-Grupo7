@@ -28,7 +28,7 @@
 
 .gestion-contenedor {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(2, 3fr);
     gap: 24px;
 }
 

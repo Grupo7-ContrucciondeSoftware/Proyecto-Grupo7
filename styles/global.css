@@ -23,9 +23,11 @@
     --color-rol-suave: #dce9ff;
 
     /* Colores */
-    --color-ingreso: #22c55e;
+    --color-ingreso: #163d2a;
     --color-salida: #ef4444;
     --color-usuarios: #d48a09;
+    --color-ingreso-fondo: #22c55e;
+    --color-salida-fondo: #3d1a1a;
 
     /* Texto */
     --texto-principal: #1a2035;
@@ -50,6 +52,12 @@ body:has(#theme-toggle:checked) {
     --texto-secundario: #7b83a6;
     --texto-muted: #4a5070;
     --color-rol-suave: #1e2d4a;
+
+    --color-ingreso: #22c55e;
+    --color-salida: #3d1a1a;
+    --color-usuarios: #d48a09;
+    --color-ingreso-fondo: #163d2a;
+    --color-salida-fondo: #ef4444;
 }
 
 #theme-toggle:checked ~ #header-principal .img-logo,

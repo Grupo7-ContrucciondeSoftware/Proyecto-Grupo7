@@ -11,11 +11,13 @@
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 15px;
+    font-weight: 800;
 }
 
 .admin {
-    background: #1e2d4a;
-    color: #4f8ef7;
+    background: var(--color-rol-suave);
+    color:  var(--color-rol);
+    font-weight: 800;
 }
 
 .usuario {
@@ -27,13 +29,13 @@
 .estado {
     padding: 4px 10px;
     border-radius: 6px;
-    font-size: 12px;
     font-size: 15px;
+    font-weight: 800;
 }
 
 .activo {
-    background: #163d2a;
-    color: var(--color-ingreso);
+    background: var(--color-ingreso-fondo);
+    color:  var(--color-ingreso);
 }
 
 .suspendido {
@@ -42,8 +44,8 @@
 }
 
 .bloqueado {
-    background: #3d1a1a;
-    color: var(--color-salida);
+    background: var(--color-salida);
+    color: var(--color-salida-fondo);
 }
 
 #btn-editar{

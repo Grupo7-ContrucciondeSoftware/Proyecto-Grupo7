@@ -19,20 +19,6 @@ body::before {
     z-index: -1;
 }
 
-body:has(#theme-toggle:checked) {
-
-    --color-fondo: #0f1117;
-    --color-superficie: #1a1d27;
-    --color-superficie-2: #22263a;
-    --color-primario: #030510;
-    --color-borde: #2e3248;
-
-    --texto-principal: #e8eaf6;
-    --texto-secundario: #7b83a6;
-    --texto-muted: #4a5070;
-    --color-rol-suave: #1e2d4a;
-}
-
 /* TARJETA INFORMACIÓN */
 
 .contenedor {
