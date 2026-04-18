@@ -106,7 +106,12 @@
     margin-top: 20px;
 }
 
-/* BOTÓN ELEGIR */
-.btn-elegir {
-    font-size: 0.8rem;
+.tipo-ingreso{
+    background: var(--ingreso-placa);
+    color: var(--ingreso-color);
 }
+
+.tipo-salida {
+    background: var(--salida-placa);
+    color: var(--salida-color);
+} 

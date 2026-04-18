@@ -53,11 +53,10 @@
                 <a href="../index/login.html" class="btn btn-secundario">Cerrar sesión</a>
             </div>
 
-            <div>
-                <label for="theme-toggle">
-                    <div class="track">Activa</div>
-                </label>
-            </div>
+            <label for="theme-toggle" class="btn-tema">
+                <img src="../extras/modoOscuro.svg" class="icono-oscuro" alt="Modo Oscuro" style="min-height: 25px;">
+                <img src="../extras/modoClaro.svg" class="icono-claro" alt="Modo claro" style="min-height: 25px;">
+            </label>
 
         </div>
     </header>
@@ -167,61 +166,69 @@
 
                 <!-- TABLA -->
                 <table class="tabla">
+
+                    <!-- HEADER DE LA TABLA -->
                     <thead class="header-tabla">
-                    <tr>
-                        <th class="header-tabla">Codigo</th>
-                        <th class="header-tabla">Fecha de Adición</th>
-                        <th class="header-tabla">Producto</th>
-                        <th class="header-tabla">Categoría</th>
-                        <th class="header-tabla">Stock Actual</th>
-                        <th class="header-tabla">Unidad de medida</th>
-                        <th class="header-tabla">Precio x Unidad</th>
-                        <th class="header-tabla">Descripción</th>
-                        <th class="header-tabla">Acciones</th>
-                    </tr>
+                        <tr>
+                            <th class="header-tabla">Codigo</th>
+                            <th class="header-tabla">Fecha de Adición</th>
+                            <th class="header-tabla">Producto</th>
+                            <th class="header-tabla">Categoría</th>
+                            <th class="header-tabla">Stock Actual</th>
+                            <th class="header-tabla">Unidad de medida</th>
+                            <th class="header-tabla">Precio x Unidad</th>
+                            <th class="header-tabla">Descripción</th>
+                            <th class="header-tabla">Acciones</th>
+                        </tr>
                     </thead>
+
+                    <!-- CONTENIDO DE LA TABLA -->
                     <tbody class="body-tabla">
-                        <td class="body-tabla">1</td>
-                        <td class="body-tabla">07-04-2026</td>
-                        <td class="body-tabla">Lata Leche Gloria</td>
-                        <td class="body-tabla">Lácteos</td>
-                        <td class="body-tabla">10</td>
-                        <td class="body-tabla">Unidad</td>
-                        <td class="body-tabla">S/3.90</td>
-                        <td class="body-tabla">Leche entera</td>
-                        <td class="body-tabla">
-                            <a class="btn btn-secundario btn-editar" href="../index/adminProducto.html">Editar</a>
-                            <a class="btn btn-secundario btn-eliminar">Eliminar</a>
-                        </td>
-                    </tbody class="body-tabla">
-                    <tbody class="body-tabla">
-                        <td class="body-tabla">2</td>
-                        <td class="body-tabla">03-04-2026</td>
-                        <td class="body-tabla">Pan</td>
-                        <td class="body-tabla">Pastelería</td>
-                        <td class="body-tabla">10</td>
-                        <td class="body-tabla">kg</td>
-                        <td class="body-tabla">S/7.90 x 1kg</td>
-                        <td class="body-tabla">Ninguno</td>
-                        <td class="body-tabla">
-                            <a class="btn btn-secundario btn-editar" href="../index/adminProducto.html">Editar</a>
-                            <a class="btn btn-secundario btn-eliminar">Eliminar</a>
-                        </td>
-                    </tbody class="body-tabla">
-                    <tbody class="body-tabla">
-                        <td class="body-tabla">3</td>
-                        <td class="body-tabla">09-04-2026</td>
-                        <td class="body-tabla">Manzana</td>
-                        <td class="body-tabla">Frutas</td>
-                        <td class="body-tabla">3</td>
-                        <td class="body-tabla">Kg</td>
-                        <td class="body-tabla">S/8.90 x 1kg</td>
-                        <td class="body-tabla">Ninguno</td>
-                        <td class="body-tabla">
-                            <a class="btn btn-secundario btn-editar" href="../index/editarProducto.html">Editar</a>
-                            <a class="btn btn-secundario btn-eliminar">Eliminar</a>
-                        </td>
-                    </tbody class="body-tabla">
+                        <tr>
+                            <td class="body-tabla">1</td>
+                            <td class="body-tabla">07-04-2026</td>
+                            <td class="body-tabla">Lata Leche Gloria</td>
+                            <td class="body-tabla">Lácteos</td>
+                            <td class="body-tabla">10</td>
+                            <td class="body-tabla">Unidad</td>
+                            <td class="body-tabla">S/3.90</td>
+                            <td class="body-tabla">Leche entera</td>
+                            <td class="body-tabla">
+                                <a class="btn btn-secundario btn-editar" href="../index/adminProducto.html">Editar</a>
+                                <a class="btn btn-secundario btn-eliminar">Eliminar</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="body-tabla">2</td>
+                            <td class="body-tabla">03-04-2026</td>
+                            <td class="body-tabla">Pan</td>
+                            <td class="body-tabla">Pastelería</td>
+                            <td class="body-tabla">10</td>
+                            <td class="body-tabla">kg</td>
+                            <td class="body-tabla">S/7.90 x 1kg</td>
+                            <td class="body-tabla">Ninguno</td>
+                            <td class="body-tabla">
+                                <a class="btn btn-secundario btn-editar" href="../index/adminProducto.html">Editar</a>
+                                <a class="btn btn-secundario btn-eliminar">Eliminar</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="body-tabla">3</td>
+                            <td class="body-tabla">09-04-2026</td>
+                            <td class="body-tabla">Manzana</td>
+                            <td class="body-tabla">Frutas</td>
+                            <td class="body-tabla">3</td>
+                            <td class="body-tabla">Kg</td>
+                            <td class="body-tabla">S/8.90 x 1kg</td>
+                            <td class="body-tabla">Ninguno</td>
+                            <td class="body-tabla">
+                                <a class="btn btn-secundario btn-editar" href="../index/editarProducto.html">Editar</a>
+                                <a class="btn btn-secundario btn-eliminar">Eliminar</a>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
                 
             </div>
@@ -365,10 +372,10 @@
                         ></textarea>
                     </div>
 
-                    <!-- Botones Guardar/Volver -->
+                    <!-- Botones Guardar/Limpiar -->
                     <div class="formulario-acciones">
-                        <a onclick="location.href='../index/adminproducto.html'" class="btn btn-secundario">Volver</a>
-                        <button type="submit" class="btn btn-primario" id="btn-guardar-producto">Guardar producto</button>
+                        <button type="reset" class="btn btn-secundario">Limpiar</button>
+                        <button type="submit" class="btn btn-primario">Agregar Producto</button>
                     </div>
                 </section>
             </div>
@@ -425,7 +432,7 @@
                                 <td class="body-tabla">S/3.90</td>
                                 <td class="body-tabla">Leche entera</td>
                                 <td class="body-tabla">
-                                        <button class="btn btn-primario btn-elegir">Elegir</button>
+                                    <a class="btn btn-secundario btn-elegir">Elegir</a>
                                 </td>
                             </tr>
                             <tr>
@@ -555,10 +562,10 @@
                             ></textarea>
                     </div>
 
-                    <!-- Botones Guardar/Volver -->
+                    <!-- Botones Guardar/Limpiar -->
                     <div class="formulario-acciones">
-                        <a onclick="location.href='../index/adminproducto.html'" class="btn btn-secundario">Volver</a>
-                        <button type="submit" class="btn btn-primario" id="btn-guardar-producto">Guardar producto</button>
+                        <button type="reset" class="btn btn-secundario">Limpiar</button>
+                        <button type="submit" class="btn btn-primario">Guardar cambios</button>
                     </div>
 
                 </section>

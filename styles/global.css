@@ -22,13 +22,6 @@
     --color-rol: #4f8ef7;
     --color-rol-suave: #dce9ff;
 
-    /* Colores */
-    --color-ingreso: #163d2a;
-    --color-salida: #ef4444;
-    --color-usuarios: #d48a09;
-    --color-ingreso-fondo: #22c55e;
-    --color-salida-fondo: #3d1a1a;
-
     /* Texto */
     --texto-principal: #1a2035;
     --texto-secundario: #5a6480;
@@ -36,6 +29,28 @@
 
     /* Tipografía */
     --fuente-principal: 'DM Sans', sans-serif;
+
+    /* Placas */
+    --ingreso-placa: #dcfce7;
+    --ingreso-color: #166534;
+
+    --salida-placa: #fee2e2;
+    --salida-color: #991b1b;
+
+    --admin-placa: #dbeafe;
+    --admin-color: #1e40af;
+
+    --usuario-placa: #fef9c3;
+    --usuario-color: #854d0e;
+
+    --activo-placa: #dcfce7;
+    --activo-color: #166534;
+
+    --suspendido-placa: #f3f4f6;
+    --suspendido-color: #374151;
+
+    --bloqueado-placa: #fee2e2;
+    --bloqueado-color: #991b1b;
 }
 
 /* Colores alternativos*/
@@ -53,11 +68,27 @@ body:has(#theme-toggle:checked) {
     --texto-muted: #4a5070;
     --color-rol-suave: #1e2d4a;
 
-    --color-ingreso: #22c55e;
-    --color-salida: #3d1a1a;
-    --color-usuarios: #d48a09;
-    --color-ingreso-fondo: #163d2a;
-    --color-salida-fondo: #ef4444;
+    /* Placas */
+    --ingreso-placa: #14532d;
+    --ingreso-color: #86efac;
+
+    --salida-placa: #7f1d1d;
+    --salida-color: #fca5a5;
+
+    --admin-placa: #1e3a5f;
+    --admin-color: #93c5fd;
+
+    --usuario-placa: #422006;
+    --usuario-color: #fde68a;
+
+    --activo-placa: #14532d;
+    --activo-color: #86efac;
+
+    --suspendido-placa: #1f2937;
+    --suspendido-color: #9ca3af;
+
+    --bloqueado-placa: #7f1d1d;
+    --bloqueado-color: #fca5a5;
 }
 
 #theme-toggle:checked ~ #header-principal .img-logo,
@@ -150,6 +181,17 @@ ul {
     font-size: 0.9rem;
     border-radius: 8px;
     transition: filter 0.2s ease;
+}
+
+.btn-tema {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    background: var(--color-superficie);
+    color: var(--texto-principal);
+    font-family: var(--fuente-principal);
+    transition: background 0.3s, color 0.3s;
 }
 
 
@@ -333,6 +375,12 @@ ul {
     display: block;
 }
 
+.icono-claro { display: none; }
+.icono-oscuro { display: block; }
+
+/* Al activar el tema oscuro, intercambia */
+body:has(#theme-toggle:checked) .icono-claro { display: block; }
+body:has(#theme-toggle:checked) .icono-oscuro { display: none; }
 
 /* USUARIO */
 

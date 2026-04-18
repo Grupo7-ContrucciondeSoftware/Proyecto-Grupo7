@@ -50,11 +50,10 @@
                 <a href="../index/login.html" class="btn btn-secundario">Cerrar sesión</a>
             </div>
 
-            <div>
-                <label for="theme-toggle">
-                    <div class="track">Activa</div>
-                </label>
-            </div>
+            <label for="theme-toggle" class="btn-tema">
+                <img src="../extras/modoOscuro.svg" class="icono-oscuro" alt="Modo Oscuro" style="min-height: 25px;">
+                <img src="../extras/modoClaro.svg" class="icono-claro" alt="Modo claro" style="min-height: 25px;">
+            </label>
 
         </div>
     </header>
@@ -141,7 +140,7 @@
                                 <td class="body-tabla">S/3.90</td>
                                 <td class="body-tabla">Leche entera</td>
                                 <td class="body-tabla">
-                                        <button class="btn btn-primario btn-elegir">Elegir</button>
+                                   <a class="btn btn-secundario" id="btn-elegir">Elegir</a>
                                 </td>
                             </tr>
                         
@@ -238,7 +237,7 @@
                         ></textarea>
                     </div> 
 
-                    <!-- Botones Guardar/Volver -->
+                    <!-- Botones Guardar/Limpiar -->
                     <div class="formulario-acciones">
                         <button type="reset" class="btn btn-secundario">Limpiar</button>
                         <button type="submit" class="btn btn-primario">Registrar Salida</button>
@@ -300,7 +299,7 @@
                                 <td class="body-tabla">S/3.90</td>
                                 <td class="body-tabla">Leche entera</td>
                                 <td class="body-tabla">
-                                        <button class="btn btn-primario btn-elegir">Elegir</button>
+                                    <a class="btn btn-secundario" id="btn-elegir">Elegir</a>
                                 </td>
                             </tr>
                             <tr>
@@ -394,7 +393,7 @@
                             ></textarea>
                     </div>
 
-                    <!-- Botones Guardar/Volver -->
+                    <!-- Botones Guardar/Limpiar -->
                     <div class="formulario-acciones">
                         <button type="reset" class="btn btn-secundario">Limpiar</button>
                         <button type="submit" class="btn btn-primario">Registrar Ingreso</button>

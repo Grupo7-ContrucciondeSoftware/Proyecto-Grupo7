@@ -2,8 +2,22 @@
    ESTILOS ADMINISTRAR USUARIOS
    ============================================ */
 
-.form-control{
-    width: 25%;
+/* Muestra la pestaña del input que está marcado */
+#pestaña-listaUsuario:checked ~ .centro-pagina-gestion #contenido-listaUsuario,
+#pestaña-agregarUsuario:checked ~ .centro-pagina-gestion #contenido-agregarUsuario,
+#pestaña-editarUsuario:checked ~ .centro-pagina-gestion #contenido-editarUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Resalta visualmente el label de la pestaña activa. */
+#pestaña-listaUsuario:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-listaUsuario"],
+#pestaña-agregarUsuario:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-agregarUsuario"],
+#pestaña-editarUsuario:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-editarUsuario"]{
+    color: var(--texto-principal);
+    border-bottom: 2px solid var(--color-rol);
+    background-color: var(--color-rol);
 }
 
 /* ROLES */
@@ -15,14 +29,13 @@
 }
 
 .admin {
-    background: var(--color-rol-suave);
-    color:  var(--color-rol);
-    font-weight: 800;
+    background: var(--admin-placa);
+    color: var(--admin-color);
 }
 
 .usuario {
-    background: #8a5a07;
-    color: #ffd182;
+    background: var(--usuario-placa);
+    color: var(--usuario-color);
 }
 
 /* ESTADOS */
@@ -34,18 +47,18 @@
 }
 
 .activo {
-    background: var(--color-ingreso-fondo);
-    color:  var(--color-ingreso);
+    background: var(--activo-placa);
+    color: var(--activo-color);
+}
+
+.bloqueado{
+    background: var(--bloqueado-placa);
+    color: var(--bloqueado-color);
 }
 
 .suspendido {
-    background: #2e2d2e;
-    color: #b0b0b0;
-}
-
-.bloqueado {
-    background: var(--color-salida);
-    color: var(--color-salida-fondo);
+    background: var(--suspendido-placa);
+    color: var(--suspendido-color);
 }
 
 #btn-editar{

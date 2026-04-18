@@ -1,3 +1,9 @@
+/* ============================================
+   ESTILOS DE ADMINISTRAR MOVIMIENTOS
+   ============================================ */
+
+
+/* Muestra la pestaña del input que está marcado */
 #pestaña-salida:checked ~ .centro-pagina-gestion #contenido-salida,
 #pestaña-ingreso:checked ~ .centro-pagina-gestion #contenido-ingreso,
 #pestaña-historial:checked ~ .centro-pagina-gestion #contenido-historial {
@@ -6,7 +12,7 @@
     gap: 40px;
 }
 
-/* Pestaña activa según radio seleccionado */
+/* Resalta visualmente el label de la pestaña activa. */
 #pestaña-salida:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-salida"],
 #pestaña-ingreso:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-ingreso"],
 #pestaña-historial:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-historial"] {
@@ -17,8 +23,6 @@
 
 /* TIPO  */
 .tipo-ingreso {
-    background: var(--color-ingreso);
-    color: var(--color-ingreso-fondo);
     padding: 3px 10px;
     border-radius: 6px;
     font-size: 13px;
@@ -26,8 +30,6 @@
 }
 
 .tipo-salida {
-    background: var(--color-salida);
-    color: var(--color-salida-fondo);
     padding: 3px 10px;
     border-radius: 6px;
     font-size: 13px;
