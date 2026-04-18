@@ -20,7 +20,7 @@
     <header id="header-principal">
         <div class="header-contenedor">
 
-            <!-- LOGO -->
+            <!-- LOGO DEL SISTEMA -->
             <a class="logo" href="../index/main.html">
                 <img src="../extras/logoPequeñoALMXNAlt.png" alt="Logo ALMXN" class="img img-logo">
             </a>
@@ -62,33 +62,42 @@
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <main id="contenido-principal-gestion">
 
-            <input type="radio" name="tab" id="pestaña-salida" checked style="display:none">
-            <input type="radio" name="tab" id="pestaña-ingreso" style="display:none">
-            <input type="radio" name="tab" id="pestaña-historial" style="display:none">
+        <!-- ===== INPUTS PARA CAMBIAR DE PESTAÑAS ===== -->
+        <input type="radio" name="tab" id="pestaña-salida" checked style="display:none">
+        <input type="radio" name="tab" id="pestaña-ingreso" style="display:none">
+        <input type="radio" name="tab" id="pestaña-historial" style="display:none">
 
         <div class="centro-pagina-gestion">
 
-            <!-- TÍTULO  -->
+            <!-- TITULO/INICIO -->
             <section class="gestion-inicio">
                 <div>
                     <h1 class="titulo-seccion">Administrar Movimientos</h1>
                     <p class="subtitulo-seccion">Registra ingresos, salidas y consulta el historial</p>
                 </div>
+
+                <!-- BOTON VOLVER -->
                 <div class="formulario-acciones">
                     <a href="../index/gestion.html" class="btn btn-secundario">Volver</a>
                 </div>
             </section>
 
-            <!-- PESTAÑAS -->
+            <!-- ============================================
+                           PESTAÑAS
+            ============================================ -->
             <div class="pestañas">
                 <label for="pestaña-salida" class="pestaña">Registrar Salida</label>
                 <label for="pestaña-ingreso" class="pestaña">Registrar Ingreso</label>
                 <label for="pestaña-historial" class="pestaña">Historial de Movimientos</label>
             </div>
 
-            <!-- ===== REGISTRAR SALIDA ===== -->
+
+            <!-- ============================================
+                           REGISTRAR SALIDAS
+            ============================================ -->
             <div class="pestaña-contenido" id="contenido-salida">
             
+                <!-- Nombre de producto -->
                 <section class="form-grupo">
                     <label for="nombre-producto-salida" class="form-label">Nombre del producto</label>
             
@@ -105,6 +114,7 @@
                     </div>
                 </section>
             
+                <!-- TABLA -->
                 <section class="form-grupo">
                     <label class="form-label">Seleccione producto</label>
             
@@ -160,10 +170,12 @@
                     </table>
                 </section>
             
+                <!-- FORMULARIO -->
                 <section class="form-grupo">
             
                     <div class="formulario">
             
+                        <!-- Cantidad -->
                         <div class="form-grupo">
                             <label for="cantidad-salida" class="form-label">Cantidad</label>
                             <input
@@ -177,6 +189,7 @@
                             >
                         </div>
             
+                        <!-- Fecha -->
                         <div class="form-grupo">
                             <label for="fecha-salida" class="form-label">Fecha</label>
                             <input
@@ -188,6 +201,7 @@
                             >
                         </div>
             
+                        <!-- Motivo -->
                         <div class="form-grupo">
                             <label for="motivo-salida" class="form-label">Motivo</label>
                             <select id="motivo-salida" name="motivo-salida" class="form-control">
@@ -198,6 +212,7 @@
                             </select>
                         </div>
             
+                        <!-- Destino -->
                         <div class="form-grupo">
                             <label for="destino-salida" class="form-label">Destino (opcional)</label>
                             <input
@@ -211,6 +226,7 @@
                         </div>
                     </div>
 
+                    <!-- Observaciones -->
                     <div class="form-grupo form-textarea">
                         <label for="observacion-salida" class="form-label">Observaciones (opcional)</label>
                         <textarea
@@ -222,6 +238,7 @@
                         ></textarea>
                     </div> 
 
+                    <!-- Botones Guardar/Volver -->
                     <div class="formulario-acciones">
                         <button type="reset" class="btn btn-secundario">Limpiar</button>
                         <button type="submit" class="btn btn-primario">Registrar Salida</button>
@@ -231,11 +248,16 @@
             
             </div>
 
-            <!-- ===== REGISTRAR INGRESO ===== -->
+
+            <!-- ============================================
+                           REGISTRAR INGRESOS
+            ============================================ -->
+
+
             <div class="pestaña-contenido" id="contenido-ingreso">
 
+                <!-- Nombre de Producto -->
                 <section class="form-grupo">
-                    
                     <label for="nombre-producto-ingreso" class="form-label">Nombre del producto</label>    
                     <div class="buscador-boton">
                         <input
@@ -250,7 +272,9 @@
                     </div>
                 </section>
             
+                <!-- TABLA -->
                 <section class="form-grupo">
+
                     <label class="form-label">Seleccione producto</label>
             
                     <table class="tabla">
@@ -302,10 +326,13 @@
                         </tbody>
                     </table>
                 </section>
-                
+    
+                <!-- FORMULARIO -->
                 <section class="form-grupo">
 
                     <div class="formulario">
+                        
+                        <!-- Cantidad -->
                         <div class="form-grupo">
                             <label for="cantidad-ingreso" class="form-label">Cantidad</label>
                             <input 
@@ -318,6 +345,7 @@
                                 required>
                         </div>
 
+                        <!-- Fecha -->
                         <div class="form-grupo">
                             <label for="fecha-ingreso" class="form-label">Fecha</label>
                             <input 
@@ -329,6 +357,7 @@
                             >
                         </div>
 
+                        <!-- Motivo -->
                         <div class="form-grupo">
                             <label for="motivo-ingreso" class="form-label">Motivo</label>
                             <select id="motivo-ingreso" name="motivo-ingreso" class="form-control">
@@ -339,6 +368,7 @@
                             </select>
                         </div>
 
+                        <!-- Proveedor -->
                         <div class="form-grupo">
                             <label for="proveedor-ingreso" class="form-label">Proveedor (opcional)</label>
                             <input
@@ -352,7 +382,8 @@
 
                     </div>
 
-                    <div class="form-grupo">
+                    <!-- Observaciones -->
+                    <div class="form-grupo form-textarea">
                         <label for="observacion-ingreso" class="form-label">Observaciones (opcional)</label>
                         <textarea 
                             id="observacion-ingreso"
@@ -363,7 +394,7 @@
                             ></textarea>
                     </div>
 
-                    <!-- BOTONES -->
+                    <!-- Botones Guardar/Volver -->
                     <div class="formulario-acciones">
                         <button type="reset" class="btn btn-secundario">Limpiar</button>
                         <button type="submit" class="btn btn-primario">Registrar Ingreso</button>
@@ -373,7 +404,12 @@
 
             </div>
 
-            <!-- ===== HISTORIAL DE MOVIMIENTOS ===== -->
+
+            <!-- ============================================
+                           HISTORIAL DE MOVIMIENTOS
+            ============================================ -->
+
+
             <div class="pestaña-contenido" id="contenido-historial">
 
                 <!-- FILTROS -->

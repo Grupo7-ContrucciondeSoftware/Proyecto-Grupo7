@@ -45,3 +45,68 @@
     margin-top: 15px;
     justify-content: space-between;
 }
+
+/* PESTAÑAS */
+
+.pestaña-contenido {
+    display: none;
+}
+
+.pestañas {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--color-borde);
+    margin-bottom: 0;
+}
+
+.pestaña {
+    padding: 10px 24px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--texto-secundario);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.2s, border-color 0.2s;
+    font-family: var(--fuente-principal);
+    letter-spacing: 0.01em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.pestaña:hover {
+    color: var(--texto-principal);
+    background-color: var(--color-rol);
+}
+
+/* ===== TABLA ===== */
+
+.tabla {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* BUSCADOR */
+
+.buscador-boton {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-primario{
+    width: 25%;
+}
+
+.buscador-boton .form-control {
+    flex: 1;
+}
+
+.form-textarea{
+    margin-top: 20px;
+}
+
+/* BOTÓN ELEGIR */
+.btn-elegir {
+    font-size: 0.8rem;
+}
