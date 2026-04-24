@@ -1,0 +1,39 @@
+/* ============================================
+   LOGIN
+   ============================================ */
+
+.login-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    margin: 0;
+}
+
+.login-tarjeta {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 30px;
+    padding: 50px;
+    min-width: 500px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 10px;
+}

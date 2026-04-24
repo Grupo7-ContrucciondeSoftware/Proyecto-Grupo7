@@ -1,0 +1,37 @@
+/* ============================================
+   ESTILOS DE ADMINISTRAR MOVIMIENTOS
+   ============================================ */
+
+
+/* Muestra la pestaña del input que está marcado */
+#pestaña-salida:checked ~ .centro-pagina-gestion #contenido-salida,
+#pestaña-ingreso:checked ~ .centro-pagina-gestion #contenido-ingreso,
+#pestaña-historial:checked ~ .centro-pagina-gestion #contenido-historial {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Resalta visualmente el label de la pestaña activa. */
+#pestaña-salida:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-salida"],
+#pestaña-ingreso:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-ingreso"],
+#pestaña-historial:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-historial"] {
+    color: var(--texto-principal);
+    border-bottom: 2px solid var(--color-rol);
+    background-color: var(--color-rol);
+}
+
+/* TIPO  */
+.tipo-ingreso {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.tipo-salida {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+}

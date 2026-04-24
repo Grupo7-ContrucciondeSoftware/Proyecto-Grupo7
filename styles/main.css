@@ -1,0 +1,99 @@
+/* ============================================
+   MAIN
+   ============================================ */
+
+#contenido-principal {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    height: 100vh;
+}
+
+.seccion-imagen {
+    width: 400px;
+    background-color: var(--color-superficie-2);
+}
+
+.img-main {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SECCIÓN BIENVENIDA y RESUMEN */
+
+.seccion-bienvenida,
+.seccion-resumen {
+    min-width: 200px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.centro-pagina {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.seccion-bienvenida {
+    padding: 0px 0px 20px;
+    border-bottom: 1px solid var(--color-borde);
+    align-items: center;
+    text-align: center;
+}
+
+.seccion-resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* BUSCADOR GLOBAL */
+
+.buscador-global {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.buscador-global .titulo-seccion {
+    margin-bottom: 0;
+}
+
+.buscador-formulario {
+    width: 100%;
+    max-width: 500px
+}
+
+.buscador-boton {
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    transition: all 0.3s ease;
+    gap: 15px;
+}
+
+.form-control {
+    flex: 1;
+    font-size: 1.1rem;
+    padding: 10px;
+}
