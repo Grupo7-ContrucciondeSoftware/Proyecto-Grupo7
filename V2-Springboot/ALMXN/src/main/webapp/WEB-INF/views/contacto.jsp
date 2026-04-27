@@ -1,0 +1,94 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Sistema de Gestión de Almacén">
+    <title>ALMXN - Contacto</title>
+
+    <!-- ===== ESTILOS ===== -->
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+
+</head>
+
+<body>
+
+    <%@ include file="header.jsp" %>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main id="contacto-principal">
+
+        <!-- TITULO/INICIO -->
+        <div class="contacto-header">
+            <h1 class="titulo-seccion">Soporte y Contacto</h1>
+            <p class="subtitulo-seccion">¿Tienes algún problema con el sistema o necesitas asistencia? Escríbenos.</p>
+        </div>
+
+        <!-- CUERPO -->
+        <article class="contacto-modulo">
+            <div class="contacto-imagen">
+                <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80&w=600"
+                    alt="Equipo de soporte">
+            </div>
+
+            <div class="contacto-contenido">
+
+                <!-- FORMULARIO -->
+                <form action="main.html" class="formulario">
+                    <h2 class="titulo-seccion">Rellenar información</h2>
+
+                    <div class="form-fila">
+                        <div class="form-grupo">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" id="nombres" class="form-control" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" id="apellidos" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-fila">
+                        <div class="form-grupo">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="email" id="correo" class="form-control" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input type="tel" id="celular" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="motivo" class="form-label">Motivo de Contacto (Opcional)</label>
+                        <textarea id="motivo" class="form-control" rows="3"
+                            placeholder="Describe tu consulta..."></textarea>
+                    </div>
+
+                    <!-- BOTON SUBMIT -->
+                    <button type="submit" class="btn btn-primario">Enviar Mensaje</button>
+                </form>
+
+                <!-- MEDIOS DE CONTACTO -->
+                <div class="contacto-medios">
+                    <p class="subtitulo-seccion">O puedes contactarte por estos medios:</p>
+                    <div class="medios- links">
+                        <a href="" class="medio-item">+51 966595731</a>
+                        <a href="" class="medio-item">alonsocsr2305@gmail.com</a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <%@ include file="footer.jsp" %>
+
+</body>
+
+</html>

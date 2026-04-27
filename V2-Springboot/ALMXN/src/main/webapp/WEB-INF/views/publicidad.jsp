@@ -1,0 +1,63 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMXN - Publicidad</title>
+
+    <!-- ===== ESTILOS ===== -->
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/publicidad.css">
+
+</head>
+
+<body>
+
+    <%@ include file="header.jsp" %>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="contenedor">
+
+        <div class="contenido">
+
+            <!-- CUERPO -->
+            <h2 class="titulo-seccion">¿Qué es nuestro sistema?</h2>
+            <p class="subtitulo-seccion">
+                Es un sistema web que permite administrar los productos de un almacén,
+                registrando productos, movimientos de inventario, además de gestionar usuarios.
+            </p>
+
+            <h2 class="titulo-seccion">Funciones principales</h2>
+            <ul class="subtitulo-seccion lista">
+                <li>Registro de productos</li>
+                <li>Registro de usuarios</li>
+                <li>Ingreso de productos</li>
+                <li>Salida de productos</li>
+                <li>Control y gestión de almacén</li>
+            </ul>
+
+            <h2 class="titulo-seccion">Beneficios</h2>
+            <p class="subtitulo-seccion">
+                Facilita y mejora la organización del almacén, evitando pérdidas de productos
+                y optimizando la mejora en el control del negocio.
+            </p>
+
+            <h2 class="titulo-seccion">¿Por qué usarlo?</h2>
+            <p class="subtitulo-seccion">
+                Nuestro sistema es rápido, seguro y fácil de usar. Ideal para PYMES
+                que buscan eficiencia en su inventario.
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <%@ include file="footer.jsp" %>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Gestión de Almacén - Panel principal">
+    <title>ALMXN - Gestión</title>
+
+    <!-- ===== ESTILOS ===== -->
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/globalGestion.css">
+    <link rel="stylesheet" href="/css/gestion.css">
+
+</head>
+
+<body>
+
+    <%@ include file="header.jsp" %>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main id="contenido-principal-gestion">
+
+        <div class="centro-pagina-gestion">
+
+            <!-- TITULO/INICIO -->
+            <section id="gestion-inicio" class="gestion-inicio">
+                <div>
+                    <h1 class="titulo-seccion">Gestión de Almacén</h1>
+                    <p class="subtitulo-seccion">Selecciona alguna función:</p>
+                </div>
+
+                <div class="buscador-de-modulo">
+                    <form action="/adminProducto" class="buscador-formulario">
+                        <div class="buscador-boton">
+                            <input type="text" id="busquedaGlobal" class="form-control"
+                                placeholder="Ingrese módulo a buscar" required>
+                            <button type="submit" class="btn btn-primario btn-buscar">Buscar</button>
+                        </div>
+                    </form>
+
+                    <div class="buscador-sugerencias">
+                        <span>Sugerencias:</span>
+                        <a href="/adminUsuario.html" class="tag-sugerencia">Agregar Usuario</a>
+                        <a href="/adminMovimientos.html" class="tag-sugerencia">Registrar Salidas</a>
+                        <a href="/adminMovimientos.html" class="tag-sugerencia">Historial de Movimientos</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- CUERPO -->
+            <section id="seccion-gestion" class="seccion-gestion" aria-label="Gestionar almacén">
+
+                <!-- FUNCIONES -->
+                <div class="gestion-contenedor">
+
+                    <a class="opc gestion-administrarProductos" id="gestion-administrarProductos"
+                        href="/adminProducto">
+                        <img src="/img/icono-administrarproducto.svg" class="img img-funcion">
+                        <h3 class="opc-titulo">Administrar Productos</h3>
+                    </a>
+
+                    <a class="opc gestion-adminUsuarios" id="gestion-adminUsuarios"
+                        href="/adminUsuario">
+                        <img src="/img/icono-administrarusuario.svg" class="img img-funcion">
+                        <h3 class="opc-titulo">Administrar Usuarios</h3>
+                    </a>
+
+                    <a class="opc gestion-registrarIngreso" id="gestion-registrarIngreso"
+                        href="/adminMovimientos">
+                        <img src="/img/icono-ingresos.svg" class="img img-funcion">
+                        <h3 class="opc-titulo">Administrar Movimientos</h3>
+                    </a>
+
+                    <a class="opc gestion-adminCategorias" id="gestion-adminCategorias"
+                        href="/adminCategorias">
+                        <img src="/img/icono-ingresos.svg" class="img img-funcion">
+                        <h3 class="opc-titulo">Administrar Categorías</h3>
+                    </a>
+
+                    <a class="opc gestion-adminProveedores" id="gestion-adminProveedores"
+                        href="/adminProveedores">
+                        <img src="/img/icono-ingresos.svg" class="img img-funcion">
+                        <h3 class="opc-titulo">Administrar Proveedores</h3>
+                    </a>
+
+                    <a class="opc gestion-mostrarEstadisticas" id="gestion-mostrarEstadisticas"
+                        href="/gestion">
+                        <img src="/img/icono-estadisticas.svg" class="img img-funcion">
+                        <h3 class="opc-titulo">Ver estadísticas</h3>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <%@ include file="footer.jsp" %>
+
+</body>
+
+</html>
