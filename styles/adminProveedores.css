@@ -1,0 +1,71 @@
+/* ============================================
+   ESTILOS ADMINISTRAR USUARIOS
+   ============================================ */
+
+/* Muestra la pestaña del input que está marcado */
+#pestaña-listaProveedores:checked ~ .centro-pagina-gestion #contenido-listaProveedores,
+#pestaña-agregarProveedores:checked ~ .centro-pagina-gestion #contenido-agregarProveedores,
+#pestaña-editarProveedores:checked ~ .centro-pagina-gestion #contenido-editarProveedores {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Resalta visualmente el label de la pestaña activa. */
+#pestaña-listaProveedores:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-listaProveedores"],
+#pestaña-agregarProveedores:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-agregarProveedores"],
+#pestaña-editarProveedores:checked ~ .centro-pagina-gestion .pestañas label[for="pestaña-editarProveedores"]{
+    color: var(--texto-principal);
+    border-bottom: 2px solid var(--color-rol);
+    background-color: var(--color-rol);
+}
+
+/* ROLES */
+.rol {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.admin {
+    background: var(--admin-placa);
+    color: var(--admin-color);
+}
+
+.usuario {
+    background: var(--usuario-placa);
+    color: var(--usuario-color);
+}
+
+/* ESTADOS */
+.estado {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.activo {
+    background: var(--activo-placa);
+    color: var(--activo-color);
+}
+
+.bloqueado{
+    background: var(--bloqueado-placa);
+    color: var(--bloqueado-color);
+}
+
+.suspendido {
+    background: var(--suspendido-placa);
+    color: var(--suspendido-color);
+}
+
+#btn-editar{
+    padding: 4px 20px;
+    
+}
+
+#btn-eliminar{
+    padding: 4px 12px;
+}
