@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,9 +10,9 @@
     <title>ALMXN - Administrar Usuarios</title>
 
     <!-- ===== ESTILOS ===== -->
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/globalGestion.css">
-    <link rel="stylesheet" href="/css/adminUsuarios.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/globalGestion.css">
+    <link rel="stylesheet" href="../css/adminUsuarios.css">
 
     <script src="../js/tema.js" defer></script>
 
@@ -116,51 +118,39 @@
                             <th class="header-tabla">ID</th>
                             <th class="header-tabla">Nombre</th>
                             <th class="header-tabla">Correo</th>
-                            <th class="header-tabla">Fecha Registro</th>
+                            <th class="header-tabla">Fecha Creación</th>
                             <th class="header-tabla">Rol</th>
                             <th class="header-tabla">Estado</th>
                             <th class="header-tabla">Acciones</th>
                         </tr>
                     </thead>
 
-                    <!-- CONTENIDO DE LA TABLA -->
+                    <%-- CONTENIDO DE LA TABLA --%>
                     <tbody class="body-tabla">
-                        <tr>
-                            <td class="body-tabla">1</td>
-                            <td class="body-tabla">Juan Ramos</td>
-                            <td class="body-tabla">juan@gmail.com</td>
-                            <td class="body-tabla">14-04-2026</td>
-                            <td class="body-tabla"><span class="rol admin">Admin</span></td>
-                            <td class="body-tabla"><span class="estado activo">Activo</span></td>
-                            <td class="body-tabla">
-                                <a class="btn btn-secundario" id="btn-editar">Editar</a>
-                                <a class="btn btn-secundario" id="btn-eliminar">Eliminar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="body-tabla">2</td>
-                            <td class="body-tabla">Diego Gonzales</td>
-                            <td class="body-tabla">diego@gmail.com</td>
-                            <td class="body-tabla">14-04-2026</td>
-                            <td class="body-tabla"><span class="rol usuario">Usuario</span></td>
-                            <td class="body-tabla"><span class="estado suspendido">Suspendido</span></td>
-                            <td class="body-tabla">
-                                <a class="btn btn-secundario" id="btn-editar">Editar</a>
-                                <a class="btn btn-secundario" id="btn-eliminar">Eliminar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="body-tabla">3</td>
-                            <td class="body-tabla">Eduardo Inga</td>
-                            <td class="body-tabla">eduardo@gmail.com</td>
-                            <td class="body-tabla">14-04-2026</td>
-                            <td class="body-tabla"><span class="rol usuario">Usuario</span></td>
-                            <td class="body-tabla"><span class="estado bloqueado">Bloqueado</span></td>
-                            <td class="body-tabla">
-                                <a class="btn btn-secundario" id="btn-editar">Editar</a>
-                                <a class="btn btn-secundario" id="btn-eliminar">Eliminar</a>
-                            </td>
-                        </tr>
+
+                        <c:forEach var="usuario" items="${listaUsuarios}" >
+                            <tr>
+                                <td class="body-tabla"><c:out value="${usuario.idUsuario}"/></td>
+                                <td class="body-tabla"><c:out value="${usuario.nombres}"/></td>
+                                <td class="body-tabla"><c:out value="${usuario.correo}"/></td>
+                                <td class="body-tabla"><c:out value="${usuario.fechaCreacion}"/></td>
+                                <td class="body-tabla">
+                                    <span class="rol ${usuario.rol.toLowerCase()}">
+                                        <c:out value="${usuario.rol}"/>
+                                    </span>
+                                </td>
+                                <td class="body-tabla">
+                                    <span class="estado ${usuario.estado.toLowerCase()}">
+                                        <c:out value="${usuario.estado}"/>
+                                    </span>
+                                </td>
+                                <td class="body-tabla">
+                                    <a class="btn btn-secundario" id="btn-editar">Editar</a>
+                                    <a class="btn btn-secundario" id="btn-eliminar">Eliminar</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+
                     </tbody>
                 </table>
 

@@ -127,7 +127,7 @@
                     <!-- HEADER DE LA TABLA -->
                     <thead class="header-tabla">
                         <tr>
-                            <th class="header-tabla">Codigo</th>
+                            <th class="header-tabla">Sku</th>
                             <th class="header-tabla">Fecha de Adición</th>
                             <th class="header-tabla">Producto</th>
                             <th class="header-tabla">Categoría</th>
@@ -205,13 +205,13 @@
 
                         <!-- Código -->
                         <div class="form-grupo">
-                            <label for="codigo-producto" class="form-label">Código</label>
+                            <label for="sku-producto" class="form-label">Sku</label>
                             <input
                                 type="number"
-                                id="codigo-producto"
-                                name="codigo-producto"
+                                id="sku-producto"
+                                name="sku-producto"
                                 class="form-control"
-                                placeholder="Escriba el código"
+                                placeholder="Escriba el SKU"
                                 min="0"
                                 required
                             >

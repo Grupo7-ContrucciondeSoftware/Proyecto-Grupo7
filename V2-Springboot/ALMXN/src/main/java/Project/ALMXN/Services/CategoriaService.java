@@ -1,0 +1,10 @@
+package Project.ALMXN.Services;
+
+import java.util.List;
+import Project.ALMXN.models.Categoria;
+
+public interface CategoriaService {
+
+    public List<Categoria> obtenerTodasLasCategorias();
+
+}
