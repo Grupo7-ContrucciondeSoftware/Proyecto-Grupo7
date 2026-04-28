@@ -25,6 +25,24 @@ public class AlmacenControllers {
         return "gestion";
     }
 
+    @GetMapping("/gestion/adminProductos")
+    public String mostrarPaginaAdminProductos(Model model) {
+        model.addAttribute("paginaActiva", "gestion");
+        return "gestion/adminProductos";
+    }
+
+    @GetMapping("/gestion/adminMovimientos")
+    public String mostrarPaginaAdminMovimientos(Model model) {
+        model.addAttribute("paginaActiva", "gestion");
+        return "gestion/adminMovimientos";
+    }
+
+    @GetMapping("/gestion/adminUsuarios")
+    public String mostrarPaginaAdminUsuarios(Model model) {
+        model.addAttribute("paginaActiva", "gestion");
+        return "gestion/adminUsuarios";
+    }
+
     @GetMapping("/contacto")
     public String mostrarPaginaContacto(Model model) {
         model.addAttribute("paginaActiva", "contacto");
@@ -33,9 +51,8 @@ public class AlmacenControllers {
 
     @GetMapping("/publicidad")
     public String mostrarPaginaPublicidad(Model model) {
-        model.addAttribute("paginaACtiva", "publicidad");
+        model.addAttribute("paginaActiva", "publicidad");
         return "publicidad";
     }
-
 
 }

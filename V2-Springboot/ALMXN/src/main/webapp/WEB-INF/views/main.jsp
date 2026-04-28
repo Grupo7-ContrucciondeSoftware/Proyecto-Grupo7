@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/main.css">
 
+    <script src="/js/tema.js" defer></script>
+
 </head>
 
 <body>

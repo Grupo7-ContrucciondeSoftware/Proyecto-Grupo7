@@ -12,7 +12,6 @@ public class AlmxnApplication {
 		SpringApplication.run(AlmxnApplication.class, args);
 	}
 
-	// Registramos la consola manualmente usando el estándar Jakarta
 	@Bean
 	public ServletRegistrationBean<org.h2.server.web.JakartaWebServlet> h2servletRegistration() {
 		ServletRegistrationBean<org.h2.server.web.JakartaWebServlet> registrationBean =

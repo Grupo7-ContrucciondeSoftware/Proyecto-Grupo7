@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/publicidad.css">
 
+    <script src="/js/tema.js" defer></script>
+
 </head>
 
 <body>

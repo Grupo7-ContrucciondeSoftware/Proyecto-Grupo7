@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/css/globalGestion.css">
     <link rel="stylesheet" href="/css/gestion.css">
 
+    <script src="/js/tema.js" defer></script>
+
 </head>
 
 <body>
@@ -58,37 +60,37 @@
                 <div class="gestion-contenedor">
 
                     <a class="opc gestion-administrarProductos" id="gestion-administrarProductos"
-                        href="/adminProducto">
+                        href="/gestion/adminProductos">
                         <img src="/img/icono-administrarproducto.svg" class="img img-funcion">
                         <h3 class="opc-titulo">Administrar Productos</h3>
                     </a>
 
                     <a class="opc gestion-adminUsuarios" id="gestion-adminUsuarios"
-                        href="/adminUsuario">
+                        href="/gestion/adminUsuarios">
                         <img src="/img/icono-administrarusuario.svg" class="img img-funcion">
                         <h3 class="opc-titulo">Administrar Usuarios</h3>
                     </a>
 
-                    <a class="opc gestion-registrarIngreso" id="gestion-registrarIngreso"
-                        href="/adminMovimientos">
+                    <a class="opc gestion-adminMovimientos" id="gestion-adminMovimientos"
+                        href="/gestion/adminMovimientos">
                         <img src="/img/icono-ingresos.svg" class="img img-funcion">
                         <h3 class="opc-titulo">Administrar Movimientos</h3>
                     </a>
 
                     <a class="opc gestion-adminCategorias" id="gestion-adminCategorias"
-                        href="/adminCategorias">
+                        href="/gestion/adminCategorias">
                         <img src="/img/icono-ingresos.svg" class="img img-funcion">
                         <h3 class="opc-titulo">Administrar Categorías</h3>
                     </a>
 
                     <a class="opc gestion-adminProveedores" id="gestion-adminProveedores"
-                        href="/adminProveedores">
+                        href="/gestion/adminProveedores">
                         <img src="/img/icono-ingresos.svg" class="img img-funcion">
                         <h3 class="opc-titulo">Administrar Proveedores</h3>
                     </a>
 
                     <a class="opc gestion-mostrarEstadisticas" id="gestion-mostrarEstadisticas"
-                        href="/gestion">
+                        href="/gestion/gestion">
                         <img src="/img/icono-estadisticas.svg" class="img img-funcion">
                         <h3 class="opc-titulo">Ver estadísticas</h3>
                     </a>

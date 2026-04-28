@@ -1,0 +1,499 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrar Movimientos - Sistema de Gestión de Almacén">
+    <title>ALMXN - Administrar Movimientos</title>
+
+    <!-- ===== ESTILOS ===== -->
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/globalGestion.css">
+    <link rel="stylesheet" href="/css/adminMovimientos.css">
+
+    <script src="../js/tema.js" defer></script>
+</head>
+<body>
+
+    <%@ include file="../header.jsp" %>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main id="contenido-principal-gestion">
+
+        <!-- ===== INPUTS PARA CAMBIAR DE PESTAÑAS ===== -->
+        <input type="radio" name="tab" id="pestaña-salida" checked style="display:none">
+        <input type="radio" name="tab" id="pestaña-ingreso" style="display:none">
+        <input type="radio" name="tab" id="pestaña-historial" style="display:none">
+
+        <div class="centro-pagina-gestion">
+
+            <!-- TITULO/INICIO -->
+            <section class="gestion-inicio">
+                <div>
+                    <h1 class="titulo-seccion">Administrar Movimientos</h1>
+                    <p class="subtitulo-seccion">Registra ingresos, salidas y consulta el historial</p>
+                </div>
+
+                <!-- BOTON VOLVER -->
+                <div class="formulario-acciones">
+                    <a href="/gestion" class="btn btn-secundario">Volver</a>
+                </div>
+            </section>
+
+            <!-- ============================================
+                           PESTAÑAS
+            ============================================ -->
+            <div class="pestañas">
+                <label for="pestaña-salida" class="pestaña">Registrar Salida</label>
+                <label for="pestaña-ingreso" class="pestaña">Registrar Ingreso</label>
+                <label for="pestaña-historial" class="pestaña">Historial de Movimientos</label>
+            </div>
+
+
+            <!-- ============================================
+                           REGISTRAR SALIDAS
+            ============================================ -->
+            <div class="pestaña-contenido" id="contenido-salida">
+
+                <!-- Nombre de producto -->
+                <section class="form-grupo">
+                    <label for="nombre-producto-salida" class="form-label">Nombre del producto</label>
+
+                    <div class="buscador-boton">
+                        <input
+                            type="text"
+                            id="nombre-producto-salida"
+                            name="nombre-producto-salida"
+                            class="form-control"
+                            placeholder="Ej: Leche Gloria"
+                            required
+                        >
+                        <button class="btn btn-primario">Buscar</button>
+                    </div>
+                </section>
+
+                <!-- TABLA -->
+                <section class="form-grupo">
+                    <label class="form-label">Seleccione producto</label>
+
+                    <table class="tabla">
+                        <thead class="header-tabla">
+                            <tr>
+                                <th class="header-tabla">Codigo</th>
+                                <th class="header-tabla">Producto</th>
+                                <th class="header-tabla">Categoría</th>
+                                <th class="header-tabla">Stock Actual</th>
+                                <th class="header-tabla">Unidad de medida</th>
+                                <th class="header-tabla">Precio x Unidad</th>
+                                <th class="header-tabla">Descripción</th>
+                                <th class="header-tabla">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="body-tabla">
+                            <tr>
+                                <td class="body-tabla">1</td>
+                                <td class="body-tabla">Lata Leche Gloria</td>
+                                <td class="body-tabla">Lácteos</td>
+                                <td class="body-tabla">10</td>
+                                <td class="body-tabla">Unidad</td>
+                                <td class="body-tabla">S/3.90</td>
+                                <td class="body-tabla">Leche entera</td>
+                                <td class="body-tabla">
+                                   <a class="btn btn-secundario" id="btn-elegir">Elegir</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                            </tr>
+
+                            <tr>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- FORMULARIO -->
+                <section class="form-grupo">
+
+                    <div class="formulario">
+
+                        <!-- Cantidad -->
+                        <div class="form-grupo">
+                            <label for="cantidad-salida" class="form-label">Cantidad</label>
+                            <input
+                                type="number"
+                                id="cantidad-salida"
+                                name="cantidad-salida"
+                                class="form-control"
+                                placeholder="Ej: 10"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+                        <!-- Fecha -->
+                        <div class="form-grupo">
+                            <label for="fecha-salida" class="form-label">Fecha</label>
+                            <input
+                                type="date"
+                                id="fecha-salida"
+                                name="fecha-salida"
+                                class="form-control"
+                                required
+                            >
+                        </div>
+
+                        <!-- Motivo -->
+                        <div class="form-grupo">
+                            <label for="motivo-salida" class="form-label">Motivo</label>
+                            <select id="motivo-salida" name="motivo-salida" class="form-control">
+                                <option value="" disabled selected>Seleccione un motivo</option>
+                                <option value="1">Despacho</option>
+                                <option value="2">Merma</option>
+                                <option value="3">Otro</option>
+                            </select>
+                        </div>
+
+                        <!-- Destino -->
+                        <div class="form-grupo">
+                            <label for="destino-salida" class="form-label">Destino (opcional)</label>
+                            <input
+                                type="text"
+                                id="destino-salida"
+                                name="destino-salida"
+                                class="form-control"
+                                placeholder="Ej: Tienda centro"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Observaciones -->
+                    <div class="form-grupo form-textarea">
+                        <label for="observacion-salida" class="form-label">Observaciones (opcional)</label>
+                        <textarea
+                            id="observacion-salida"
+                            name="observacion-salida"
+                            class="form-control"
+                            placeholder="Observacion sobre la salida..."
+                            rows="3"
+                        ></textarea>
+                    </div>
+
+                    <!-- Botones Guardar/Limpiar -->
+                    <div class="formulario-acciones">
+                        <button type="reset" class="btn btn-secundario">Limpiar</button>
+                        <button type="submit" class="btn btn-primario">Registrar Salida</button>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ============================================
+                           REGISTRAR INGRESOS
+            ============================================ -->
+
+
+            <div class="pestaña-contenido" id="contenido-ingreso">
+
+                <!-- Nombre de Producto -->
+                <section class="form-grupo">
+                    <label for="nombre-producto-ingreso" class="form-label">Nombre del producto</label>
+                    <div class="buscador-boton">
+                        <input
+                        type="text"
+                        id="nombre-producto-ingreso"
+                        name="nombre-producto-ingreso"
+                        class="form-control"
+                        placeholder="Ej: Paneton Bimbo"
+                        required
+                        >
+                        <button class="btn btn-primario">Buscar</button>
+                    </div>
+                </section>
+
+                <!-- TABLA -->
+                <section class="form-grupo">
+
+                    <label class="form-label">Seleccione producto</label>
+
+                    <table class="tabla">
+                        <thead class="header-tabla">
+                            <tr>
+                                <th class="header-tabla">Codigo</th>
+                                <th class="header-tabla">Producto</th>
+                                <th class="header-tabla">Categoría</th>
+                                <th class="header-tabla">Stock Actual</th>
+                                <th class="header-tabla">Unidad de medida</th>
+                                <th class="header-tabla">Precio x Unidad</th>
+                                <th class="header-tabla">Descripción</th>
+                                <th class="header-tabla">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="body-tabla">
+                            <tr>
+                                <td class="body-tabla">1</td>
+                                <td class="body-tabla">Lata Leche Gloria</td>
+                                <td class="body-tabla">Lácteos</td>
+                                <td class="body-tabla">10</td>
+                                <td class="body-tabla">Unidad</td>
+                                <td class="body-tabla">S/3.90</td>
+                                <td class="body-tabla">Leche entera</td>
+                                <td class="body-tabla">
+                                    <a class="btn btn-secundario" id="btn-elegir">Elegir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                            </tr>
+                            <tr>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                                <td class="body-tabla">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- FORMULARIO -->
+                <section class="form-grupo">
+
+                    <div class="formulario">
+
+                        <!-- Cantidad -->
+                        <div class="form-grupo">
+                            <label for="cantidad-ingreso" class="form-label">Cantidad</label>
+                            <input
+                                type="number"
+                                id="cantidad-ingreso"
+                                name="cantidad-ingreso"
+                                class="form-control"
+                                placeholder="Ej: 50"
+                                min="0"
+                                required>
+                        </div>
+
+                        <!-- Fecha -->
+                        <div class="form-grupo">
+                            <label for="fecha-ingreso" class="form-label">Fecha</label>
+                            <input
+                                type="date"
+                                id="fecha-ingreso"
+                                name="fecha-ingreso"
+                                class="form-control"
+                                required
+                            >
+                        </div>
+
+                        <!-- Motivo -->
+                        <div class="form-grupo">
+                            <label for="motivo-ingreso" class="form-label">Motivo</label>
+                            <select id="motivo-ingreso" name="motivo-ingreso" class="form-control">
+                                <option value="" disabled selected>Seleccione un motivo</option>
+                                <option value="1">Compra</option>
+                                <option value="2">Devolución</option>
+                                <option value="3">Otros</option>
+                            </select>
+                        </div>
+
+                        <!-- Proveedor -->
+                        <div class="form-grupo">
+                            <label for="proveedor-ingreso" class="form-label">Proveedor (opcional)</label>
+                            <input
+                                type="text"
+                                id="proveedor-ingreso"
+                                name="proveedor-ingreso"
+                                class="form-control"
+                                placeholder="Ej: Distribuidora Lima"
+                            >
+                        </div>
+
+                    </div>
+
+                    <!-- Observaciones -->
+                    <div class="form-grupo form-textarea">
+                        <label for="observacion-ingreso" class="form-label">Observaciones (opcional)</label>
+                        <textarea
+                            id="observacion-ingreso"
+                            name="observacion-ingreso"
+                            class="form-control"
+                            placeholder="Detalle del ingreso..."
+                            rows="3"
+                            ></textarea>
+                    </div>
+
+                    <!-- Botones Guardar/Limpiar -->
+                    <div class="formulario-acciones">
+                        <button type="reset" class="btn btn-secundario">Limpiar</button>
+                        <button type="submit" class="btn btn-primario">Registrar Ingreso</button>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ============================================
+                           HISTORIAL DE MOVIMIENTOS
+            ============================================ -->
+
+
+            <div class="pestaña-contenido" id="contenido-historial">
+
+                <!-- FILTROS -->
+                <div class="filtro-container">
+
+                    <!-- Nombre -->
+                    <div class="filtro-grupo">
+                        <label class="form-label" for="nombre-filtro">Nombre: </label>
+                        <input class="form-control nombreFiltro" type="text" id="nombre-filtro" placeholder="Ej: Leche Gloria">
+                    </div>
+
+                    <!-- Categoría -->
+                    <div class="filtro-grupo">
+                        <label class="form-label" for="categoria-filtro">Categoría:</label>
+                        <select class="form-control categoriaFiltro" id="categoria-filtro">
+                            <option value="">Sin Filtro</option>
+                                <option value="Abarrotes">Abarrotes</option>
+                                <option value="Lacteos y Huevos">Lácteos y Huevos</option>
+                                <option value="Bebidas y Licores">Bebidas y Licores</option>
+                                <option value="Snacks y Confiteria">Snacks y Confitería</option>
+                                <option value="Frutas y Verduras">Frutras y Verduras</option>
+                                <option value="Limpieza y Hogar">Limpieza y Hogar</option>
+                                <option value="Cuidado Personal">Cuidado Personal</option>
+                                <option value="Embutidos y Fríos">Embutidos y Fríos</option>
+                                <option value="Panadería y Pastelería">Panadería y Pastelería</option>
+                        </select>
+                    </div>
+
+                    <!-- Tipo -->
+                    <div class="filtro-grupo">
+                        <label class="form-label" for="tipo-filtro">Tipo:</label>
+                        <select class="form-control" id="tipo-filtro">
+                            <option value="">Sin Filtro</option>
+                            <option value="Ingreso">Ingreso</option>
+                            <option value="Salida">Salida</option>
+                        </select>
+                    </div>
+
+                    <!-- Cantidad -->
+                    <div class="filtro-grupo">
+                        <label class="form-label" for="cantidad-filtro">Cantidad:</label>
+                        <div class="filtro-doble">
+                            <input class="form-control" type="number" id="cantidad-min-filtro" placeholder="Mín">
+                            <input class="form-control" type="number" id="cantidad-max-filtro" placeholder="Máx">
+                        </div>
+                    </div>
+
+                    <!-- Fecha -->
+                    <div class="filtro-grupo">
+                        <label class="form-label">Fecha: </label>
+                        <div class="filtro-doble">
+                            <input class="form-control fechaFiltro" type="date" id="fechaMin-filtro">
+                            <input class="form-control fechaFiltro" type="date" id="fechaMax-filtro">
+                        </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="filtro-acciones">
+                        <button class="btn btn-secundario" id="btnFiltrar">Filtrar</button>
+                        <button class="btn btn-secundario" id="btnLimpiar">Limpiar</button>
+                    </div>
+
+                </div>
+
+                <!-- TABLA -->
+                <table class="tabla">
+                    <thead class="header-tabla">
+                        <tr>
+                            <th class="header-tabla">ID</th>
+                            <th class="header-tabla">Fecha</th>
+                            <th class="header-tabla">Producto</th>
+                            <th class="header-tabla">Categoría</th>
+                            <th class="header-tabla">Tipo</th>
+                            <th class="header-tabla">Cantidad</th>
+                            <th class="header-tabla">Paquete</th>
+                            <th class="header-tabla">Motivo</th>
+                            <th class="header-tabla">Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody class="body-tabla">
+                        <tr>
+                            <td class="body-tabla">1</td>
+                            <td class="body-tabla">07-04-2026</td>
+                            <td class="body-tabla">Inca Kola 600 ml</td>
+                            <td class="body-tabla">Bebidas y Licores</td>
+                            <td class="body-tabla"><span class="tipo-ingreso">Ingreso</span></td>
+                            <td class="body-tabla">30</td>
+                            <td class="body-tabla">Unidad</td>
+                            <td class="body-tabla">Compra</td>
+                            <td class="body-tabla">Ninguno</td>
+                        </tr>
+                        <tr>
+                            <td class="body-tabla">2</td>
+                            <td class="body-tabla">03-04-2026</td>
+                            <td class="body-tabla">Piqueo Snacks</td>
+                            <td class="body-tabla">Snacks y Confitería</td>
+                            <td class="body-tabla"><span class="tipo-salida">Salida</span></td>
+                            <td class="body-tabla">10</td>
+                            <td class="body-tabla">Unidad</td>
+                            <td class="body-tabla">Despacho</td>
+                            <td class="body-tabla">Venta</td>
+                        </tr>
+                        <tr>
+                            <td class="body-tabla">3</td>
+                            <td class="body-tabla">09-04-2026</td>
+                            <td class="body-tabla">Manzana</td>
+                            <td class="body-tabla">Frutas y Verduras</td>
+                            <td class="body-tabla"><span class="tipo-salida">Salida</span></td>
+                            <td class="body-tabla">3</td>
+                            <td class="body-tabla">Kg</td>
+                            <td class="body-tabla">Despacho</td>
+                            <td class="body-tabla">Venta</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <%@ include file="../footer.jsp" %>
+
+</body>
+</html>
